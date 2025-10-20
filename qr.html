@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>QR to Index Page</title>
+  <title>QR - imissyou_deargift</title>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <style>
     body {
@@ -12,30 +12,23 @@
       align-items: center;
       height: 100vh;
       flex-direction: column;
+      color: pink;
+      font-family: sans-serif;
     }
     #qrcode {
       margin-bottom: 20px;
-    }
-    button {
-      background: pink;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 12px;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
       box-shadow: 0 0 20px pink;
+      padding: 10px;
+      background: white;
     }
   </style>
 </head>
 <body>
+  <h2>💖 Quét mã QR để xem món quà 💖</h2>
   <div id="qrcode"></div>
-  <button onclick="window.location.href='https://khoinguyenthe.github.io/imissyou_deargift/'">
-    Click để tiếp tục 💖
-  </button>
 
   <script>
-    // 👉 Thay đường link này bằng link GitHub Pages của bạn
+    // 🔗 Đường link tới trang index.html trên GitHub Pages
     const siteURL = "https://khoinguyenthe.github.io/imissyou_deargift/";
 
     new QRCode(document.getElementById("qrcode"), {
