@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tặng bạn điều bất ngờ 💝</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    #qrcode {
+      margin-top: 20px;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px pink;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 Quét mã để mở món quà nhé 💖</h1>
+  <div id="qrcode"></div>
+
+  <script>
+    // 🔗 Nhập link đến index.html — khi bạn upload online, thay bằng URL thật của bạn
+    const link = window.location.origin + window.location.pathname.replace("qr.html", "index.html");
+    new QRCode(document.getElementById("qrcode"), {
+      text: link,
+      width: 200,
+      height: 200,
+    });
+  </script>
+</body>
+</html>
