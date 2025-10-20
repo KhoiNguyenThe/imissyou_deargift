@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tặng bạn điều bất ngờ 💝</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <title>QR to Index Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <style>
     body {
       background-color: black;
-      color: white;
-      font-family: 'Comic Sans MS', cursive;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      text-align: center;
+      flex-direction: column;
     }
     #qrcode {
-      margin-top: 20px;
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px pink;
+      margin-bottom: 20px;
+    }
+    button {
+      background: pink;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 12px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 20px pink;
     }
   </style>
 </head>
 <body>
-  <h1>🎁 Quét mã để mở món quà nhé 💖</h1>
   <div id="qrcode"></div>
+  <button onclick="window.location.href='https://khoinguyenthe.github.io/imissyou_deargift/'">
+    Click để tiếp tục 💖
+  </button>
 
   <script>
-    // 🔗 Nhập link đến index.html — khi bạn upload online, thay bằng URL thật của bạn
-    const link = window.location.origin + window.location.pathname.replace("qr.html", "index.html");
+    // 👉 Thay đường link này bằng link GitHub Pages của bạn
+    const siteURL = "https://khoinguyenthe.github.io/imissyou_deargift/";
+
     new QRCode(document.getElementById("qrcode"), {
-      text: link,
+      text: siteURL,
       width: 200,
-      height: 200,
+      height: 200
     });
   </script>
 </body>
